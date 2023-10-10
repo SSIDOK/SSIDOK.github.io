@@ -1,0 +1,790 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+  }
+  
+  body {
+	background-color: #fff;
+  }
+  
+  img {
+	display: block;
+	width: 100%;
+	height: auto;
+  }
+  
+  ul, ol {
+	list-style-type: none;
+  }
+  
+  .header-block {
+	height: 40vh;
+	position: relative;
+	background: url('../images/main-bg.png') center/cover no-repeat; /* Задній фон для header */
+  }
+  
+  .header-block header {
+	position: relative;
+	z-index: 10;
+  }
+  
+  .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(198, 108, 73, 0.30);
+  }
+  
+  header .content-wrap .logo {
+	order: 2;
+  }
+  
+  .icons {
+	color: #fff;
+	margin-top: 39px;
+  }
+  
+  .logo {
+	color: #FFF;
+	font-family: Libre Franklin;
+	font-size: 24px;
+	margin-top: 36px;
+	margin-left: 100px;
+	line-height: normal;
+	font-style: normal;
+	font-weight: 700;
+  }
+  
+  .menu-list {
+	position: absolute;
+	background: #fff;
+  }
+  
+  .menu-list li:not(:last-child) {
+	margin-bottom: 20px;
+  }
+  
+  .menu-list a {
+	font-size: 2rem;
+	color: #000;
+	text-decoration: none;
+	font-family: Libre Franklin;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+  }
+  
+  /* Глобальні стилі */
+  .content-wrap {
+	padding: 0 20px;
+	max-width: 1100px;
+	margin: 0 auto;
+  }
+  
+  .d-flex {
+	display: flex;
+  }
+  
+  .hide {
+	display: none;
+  }
+  
+  .hide-menu {
+	position: absolute;
+	left: -9999px;
+  }
+
+  .welcome-text {
+	color: #FFF;
+	font-family: Libre Franklin;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 115px;
+	margin-left: 78px;
+  }
+
+  .location {
+	color: #FFF;
+	font-family: Libre Franklin;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 13px;
+	margin-left: 96px;
+  }
+
+  .latest-work {
+	color: #FFF;
+	font-family: Libre Franklin;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-decoration-line: underline;
+	margin-top: 41px;
+	margin-left: 146px;
+  }
+  .about{
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-top: 25px;
+	margin-left: 150px;
+  }
+  .text-about{
+	color: var(--Gray-1, #333);
+	text-align: justify;
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 19px;
+	margin-left: 34px;
+	width: 312px;
+	height: 212px;
+	flex-shrink: 0;
+  }
+ .skills-background {
+	background-color: #FFFAF2;
+	height: 71vh;
+	width: 100%;
+ } 
+  .skills {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-left: 156px;
+	padding-top: 25px;
+  }
+  .skills-img {
+	width: 224px;
+	height: 218px;
+	flex-shrink: 0;
+	margin-left: 71px;
+	margin-top: 25px;
+  }
+  .skills-profile {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-top: 26px;
+	margin-left: 34px;
+  }
+  .profile-text {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px; /* 208.333% */
+	margin-left: 132px;
+	margin-top: -25px;
+  }
+  .frdev-text {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-left: 34px;
+	margin-top: 31px;
+  }
+  .frdev-prog-bar {
+    width: 192px;
+	height: 18px;
+	flex-shrink: 0;
+    background-color: #F5D6AB;
+    position: relative;
+    margin-top: -22px;
+	margin-left: 132px;
+}
+.progress-fill {
+    height: 100%;
+    width: 66%;
+    background-color: #C66C49;
+}
+.frdev-tools {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-left: 34px;
+	margin-top: 10px;
+}
+.frdev-tools-text {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px; /* 208.333% */
+	margin-left: 132px;
+	margin-top: -25px;
+}
+.ui-design-skill {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-top: 18px;
+	margin-left: 34px;
+}
+.ui-design-prog-bar {
+    width: 192px;
+	height: 18px;
+	flex-shrink: 0;
+    background-color: #F5D6AB;
+    position: relative;
+    margin-top: -22px;
+	margin-left: 132px;
+}
+.ui-design-progress-fill {
+    height: 100%;
+    width: 77%;
+    background-color: #C66C49;
+}
+.ui-design-tools {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-left: 34px;
+	margin-top: 10px;
+}
+.ui-design-tools-text {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px; /* 208.333% */
+	margin-left: 132px;
+	margin-top: -25px;
+}
+.ux-research-skill {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-top: 18px;
+	margin-left: 34px;
+}
+.ux-research-prog-bar {
+    width: 192px;
+	height: 18px;
+	flex-shrink: 0;
+    background-color: #F5D6AB;
+    position: relative;
+    margin-top: -22px;
+	margin-left: 132px;
+}
+.ux-research-progress-fill {
+    height: 100%;
+    width: 88%;
+    background-color: #C66C49;
+}
+.ux-research-tools {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 25px; /* 208.333% */
+	margin-left: 34px;
+	margin-top: 10px;
+}
+.ux-research-tools-text {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 25px; /* 208.333% */
+	margin-left: 132px;
+	margin-top: -25px;
+}
+.portfolio-text {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-top: 25px;
+	margin-left: 137px;
+}
+.ux-res {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 25px; /* 178.571% */
+	margin-top: 20px;
+	margin-left: 141px;
+}
+.ux-res-text {
+	width: 308px;
+	height: 71px;
+	flex-shrink: 0;
+	color: var(--Gray-1, #333);
+	text-align: center;
+	font-family: Libre Franklin;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 15px;
+	margin-left: 34px;
+}
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); 
+    gap: 10px;
+    width: 300px;
+    height: 150px; 
+	margin-left: 34px;
+}
+
+/* Стилі для фото */
+.photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ccc;
+    overflow: hidden;
+}
+
+.photo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.photo1 {
+    width: 169.764px;
+    height: 69.846px;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.photo2 {
+    width: 124px;
+    height: 114px;
+    flex-shrink: 0;
+    margin-top: 0;
+    margin-left: 0; 
+}
+
+.photo3 {
+    width: 170px;
+    height: 114px;
+    flex-shrink: 0;
+    margin-top: -44px;
+    margin-left: 0px;
+	
+}
+
+.photo4 {
+    width: 123.685px;
+    height: 69.846px;
+    flex-shrink: 0;
+    margin-top: 0px;
+    margin-left: 0px; 
+}
+.get-in-touch-background {
+	background-color: #FFFAF2;
+	height: 42vh;
+	width: 100%;
+	margin-top: 70px;
+}
+.get-in-touch {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+	margin-left: 120px;
+	padding-top: 25px;
+}
+.social-links {
+    display: flex;
+    justify-content: space-between;
+	margin-left: 42px;
+	margin-top: 25px;
+}
+
+.group1 ul,
+.group2 ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.group1 ul li,
+.group2 ul li {
+    margin-bottom: 20px;
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.group1 {
+    flex-grow: 1;
+
+}
+.group2 {
+    flex-grow: 1;
+    margin-left: -40px; 
+}
+.email-number {
+	color: var(--Gray-1, #333);
+	font-family: Libre Franklin;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: 30px;
+	margin-left: 42px;
+}
+.email-number ul li {
+	margin-bottom: 7px;
+}
+.up-button {
+	width: 24px;
+	height: 24px;
+	margin-left: 319px;
+	margin-top: -35px;
+}
+.prev-button,
+.next-button {
+  display: none;
+}
+  @media screen and (min-width: 800px) {
+	header .content-wrap .logo {
+	  order: 0;
+	}
+	.icons {
+	  display: none;
+	}
+	.hide-menu {
+	  position: static;
+	}
+	.menu-list {
+	  background: transparent;
+	  display: flex;
+	  justify-content: space-around;
+	  margin-left: 745px;
+	  margin-top: 93px;
+	  width: 529px;
+	  height: 22px;
+	  flex-shrink: 0;
+	}
+	.menu-list li {
+	  margin-right: 59px;
+	}
+	.menu-list a {
+	  color: #FFF;
+	  font-family: Libre Franklin;
+	  font-size: 18px;
+	  font-style: normal;
+	  font-weight: 400;
+	  line-height: normal;
+	}
+	.logo {
+	  margin-top: 93px;
+	  margin-left: -165px;
+	}
+	.welcome-text {
+		color: #FFF;
+		font-family: Libre Franklin;
+		font-size: 64px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-left: 165px;
+	}
+	.location {
+		color: #FFF;
+		font-family: Libre Franklin;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-left: 165px;
+		margin-top: 26px;
+	}
+	.latest-work {
+		color: #FFF;
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		text-decoration-line: underline;
+		margin-left: 165px;
+		margin-top: 106px;
+	}
+	.header-block {
+		height: 75vh;
+		position: relative;
+	}
+	.about {
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		margin-left: 165px;
+		margin-top: 93px;
+	}
+	.text-about {
+		color: var(--Gray-1, #333);
+		text-align: justify;
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 30px; /* 166.667% */
+		width: 1107px;
+		height: 231px;
+		flex-shrink: 0;
+		margin-top: 76px;
+		margin-left: 166px;
+	}
+	.skills-background {
+		height: 74vh;
+	}
+	.skills {
+		padding-left: 165px;
+		padding-top: 93px;
+
+	}
+	.skills-img {
+		width: 350px;
+		height: 340px;
+		flex-shrink: 0;
+		margin-left: 165px;
+		margin-top: 86px;
+	}
+	.skills-container {
+		display: flex;
+		align-items: flex-start; 
+	  }
+	  
+	.skills-img {
+		margin-right: 125px;
+	  }
+	  
+	.skills-info {
+		display: flex;
+		flex-direction: column;
+		margin-top: 55px;
+	  }
+	.frdev-prog-bar, .ui-design-prog-bar,
+	.ux-research-prog-bar {
+		width: 446px;
+		height: 24px;
+		flex-shrink: 0;
+		margin-left: 215px;
+	}
+	.profile-text, .frdev-tools-text,
+	.ui-design-tools-text, .ux-research-tools-text {
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 25px; /* 138.889% */
+		margin-left: 215px;
+	}
+	.skills-profile, .frdev-text,
+	.frdev-tools, .ui-design-skill,
+	.ui-design-tools, .ux-research-skill,
+	.ux-research-tools {
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 25px; /* 138.889% */
+	}
+	.portfolio-text {
+		margin-top: 93px;
+		margin-left: 165px;
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+	}
+	.ux-res {
+		margin-top: 86px;
+		margin-left: 166px;
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 25px; /* 138.889% */
+	}
+	.ux-res-text {
+		width: 349px;
+		height: 137px;
+		flex-shrink: 0;
+		color: var(--Gray-1, #333);
+		text-align: justify;
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 30px; /* 166.667% */
+		margin-left: 166px;
+		margin-top: 48px;
+	}
+	.photo-grid {
+		flex: 1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		gap: 30px;
+		margin-left: 641px;
+		position: relative;
+		top: -150px;
+	}
+
+	.photo {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #ccc;
+		overflow: hidden;
+		position: relative;
+
+	}
+	.photo img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	
+	.photo1 {
+		width: 350px;
+		height: 144px;
+		flex-shrink: 0;
+		
+	}
+	
+	.photo2 {
+		width: 255px;
+    	height: 230px;
+		flex-shrink: 0;
+	}
+	
+	.photo3 {
+		width: 350px;
+		height: 233px;
+		flex-shrink: 0;
+		margin-top: -88px;
+	}
+	
+	.photo4 {
+		width: 255px;
+		height: 145px;
+		flex-shrink: 0;
+	}
+	.container {
+		height: 70vh;
+	}
+	.desktop-button {
+        display: block; 
+    }
+	.prev-button {
+		width: 24px;
+		height: 24px;
+		margin-top: 171px;
+		margin-left: 10px;
+	}
+	.next-button {
+		width: 24px;
+		height: 24px;
+		margin-left: 65px;
+		margin-top: -24px;
+	}
+	.get-in-touch-background {
+		height: 58vh;
+	}
+	.get-in-touch {
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		padding-top: 93px;
+		margin-left: 165px;
+	}
+	.group1 ul li,
+	.group2 ul li{
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		margin-top: 21px;
+		margin-left: 125px;
+	}
+	.group2 {
+		margin-right: 929px;
+	}
+	.email-number {
+		margin-left: 935px;
+		margin-top: -205px;
+		color: var(--Gray-1, #333);
+		font-family: Libre Franklin;
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+	.email-number ul li {
+		margin-bottom: 26px; 
+	}
+	
+	.up-button {
+		margin-left: 1800px;
+		margin-top: 230px;
+	}
+}
