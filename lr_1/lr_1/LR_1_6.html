@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Введення прізвищ і імен</title>
+</head>
+<body>
+    <script>
+        var names = [];
+        while (true) {
+            var fullName = prompt("Введіть прізвище та ім'я або натисніть 'Відміна' для завершення:");
+
+            if (fullName === null) {
+                break;
+            }
+            names.push(fullName);
+        }
+        if (names.length > 0) {
+            document.write("<h3>Введені прізвища і імена:</h3>");
+            document.write("<ul>");
+
+            for (var i = 0; i < names.length; i++) {
+                document.write("<li>" + names[i] + "</li>");
+            }
+
+            document.write("</ul>");
+        } else {
+            document.write("<p>Ви не ввели жодного прізвища і імені.</p>");
+        }
+    </script>
+</body>
+</html>

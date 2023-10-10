@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Визначення пори року</title>
+</head>
+<body>
+    <script>
+        var monthNumber = parseInt(prompt("Введіть номер місяця (1-12):"));
+        var season;
+        if (monthNumber >= 1 && monthNumber <= 12) {
+            if (monthNumber >= 3 && monthNumber <= 5) {
+                season = "весна";
+            } else if (monthNumber >= 6 && monthNumber <= 8) {
+                season = "літо";
+            } else if (monthNumber >= 9 && monthNumber <= 11) {
+                season = "осінь";
+            } else {
+                season = "зима";
+            }
+            alert("Це " + season + ".");
+        } else {
+            alert("Некоректний номер місяця. Введіть число від 1 до 12.");
+        }
+    </script>
+</body>
+</html>
