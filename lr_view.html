@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Лабораторні роботи</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
         h1 {
@@ -48,6 +51,28 @@
         button:hover {
             background-color: #0054a0;
         }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+            li {
+                margin: 5px;
+            }
+            a {
+                font-size: 16px;
+            }
+            button {
+                font-size: 16px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,6 +83,7 @@
     <ul>
         <li><a href="LR_1_View.html">Лабораторна робота 1</a></li>
         <li><a href="LR_2_View.html">Лабораторна робота 2</a></li>
+        <li><a href="lab3.html">Лабораторна робота 3</a></li>
     </ul>
 
     <button onclick="window.location.href = 'index.html'">На головну сторінку</button>
