@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            margin: 10px;
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+        }
+
+        button {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        img {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+    <script>
+        function moveTextAndImage() {
+            var paragraphs = document.querySelectorAll("p");
+            var tableCells = document.querySelectorAll("td");
+
+            if (paragraphs.length >= 3 && tableCells.length >= 3) {
+                // Переміщення тексту в комірки таблиці
+                tableCells[0].textContent = paragraphs[0].textContent;
+                tableCells[3].textContent = paragraphs[1].textContent;
+                tableCells[6].textContent = paragraphs[2].textContent;
+
+                // Переміщення малюнка над таблицею
+                var image = document.getElementById("myImage");
+                var table = document.getElementById("myTable");
+                table.parentNode.insertBefore(image, table);
+            } else {
+                alert("Не вдалося знайти достатню кількість абзаців або комірок таблиці.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>HTML-сторінка з JavaScript</h1>
+    
+    <p>Уявіть собі, що ви знаходитесь на вершині гори, і навколо вас розкривається захоплюючий краєвид на незрівнянну красу природи. Гірські вершини вкриті свіжим снігом, а нижче розкинулися зелені ліси, що схожі на безкрає таємничий океан. Серце розцвітає від вражаючої краси цього місця.</p>
+
+    <p>Але гори - це не лише природа. Це місце, де можна відчути себе маленькими перед величністю світу. Тут ви можете знайти спокій і внутрішню гармонію, а також здійснити свої найзаповітніші мрії. Гори завжди надихали людей на великі досягнення і подорожі.</p>
+    
+    <p>Тому відчиніть для себе магію гір та відправляйтеся на відкриття нових світів. Зібравши свій рюкзак і друзів, ви завжди зможете відкривати нові вершини і долати найвищі горизонти. Нехай ця пригода стане вашою найяскравішою історією!</p>
+    
+
+    <table id="myTable">
+        <tr>
+            <td>Таблиця No1</td>
+            <td>Таблиця No2</td>
+            <td>Таблиця No3</td>
+        </tr>
+        <tr>
+            <td>Таблиця No4</td>
+            <td>Таблиця No5</td>
+            <td>Таблиця No6</td>
+        </tr>
+        <tr>
+            <td>Таблиця No7</td>
+            <td>Таблиця No8</td>
+            <td>Таблиця No9</td>
+        </tr>
+    </table>
+
+    <img id="myImage" src="dog_1.jpeg" alt="Малюнок">
+    <br>
+    <button onclick="moveTextAndImage()">Запустити скрипт</button>
+</body>
+</html>
