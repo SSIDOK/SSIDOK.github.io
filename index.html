@@ -3,14 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
+	<title>Document</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="styles/styles.css">	
 </head>
 <body>
 	<img src="" alt="">
-
-	<div class="header-block">
+	<div class="header-block" id="homeSection">
 		<div class="overlay"></div>
 		<header>
 			<div class="content-wrap d-flex">
@@ -24,27 +23,27 @@
 					</div>
 					<ul id='mainMenu' class='menu-list hide-menu'>
 						<li>
-							<a href="#">
+							<a href="#homeSection">
 								Home
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#aboutSection">
 								About
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#skillsSection">
 								Skills
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#portfolioSection">
 								Portfolio
 							</a>
 						</li>
 						<li>
-							<a href="#">
+							<a href="#contactSection">
 								Contact
 							</a>
 						</li>
@@ -58,11 +57,11 @@
 				Designer from Porto, Portugal
 			</div>
 			<div class="latest-work">
-				<a href="#">Latest works</a>
+				<a href="#portfolioSection">Latest works</a>
 			</div>
 		</header>
 	</div>
-	<div class="about">
+	<div class="about" id="aboutSection">
 		About
 	</div>
 	<div class="text-about">
@@ -70,7 +69,7 @@
 Arcu, sed nisi, mi, arcu libero phasellus tincidunt. Rhoncus, diam penatibus aliquet tellus, in rutrum augue. Pellentesque senectus risus consectetur et sed purus sed. Consectetur adipiscing elit. Egestas porttitor nulla nulla egestas odio pharetra egestas aliquet mollis. diam penatibus aliquet tellus, in rutrum augue. Pellentesque.
 	</div>
 	<div class="skills-background">
-		<div class="skills">
+		<div class="skills" id="skillsSection">
 			Skills
 		</div>
 		<div class="skills-container">
@@ -124,13 +123,13 @@ Arcu, sed nisi, mi, arcu libero phasellus tincidunt. Rhoncus, diam penatibus ali
 		  </div>
 	</div>
 	<div class="container">
-		<div class="text-container">
+		<div class="text-container" id="portfolioSection">
 			<div class="portfolio-text">Portfolio</div>
 			<div class="ux-res">UX Research</div>
 			<div class="ux-res-text">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 				Ac dictum nibh nam odio cursus id. Diam massa semper a tincidunt cursus ultricies lectus eget urna.
-				<br><br><a href="lr_view.html">Лабораторні роботм</a>
+				<br><br><a href="lr_view.html">Лабораторні роботи</a>
 				<div class="button">
 					<div class="prev-button desktop-button">
 						<a href="#"><img src="images/ChevronLeft(E76B).png"></a>
@@ -152,7 +151,7 @@ Arcu, sed nisi, mi, arcu libero phasellus tincidunt. Rhoncus, diam penatibus ali
 			<div class="get-in-touch">
 				Get in Touch
 			</div>
-			<div class="social-links">
+			<div class="social-links" id="contactSection">
 				<div class="group1">
 					<ul>
 						<li><a href="#">Dribbble</a></li>
@@ -178,9 +177,10 @@ Arcu, sed nisi, mi, arcu libero phasellus tincidunt. Rhoncus, diam penatibus ali
 				</ul>
 			</div>
 			<div class="up-button">
-				<a href="#"> <img src="images/ChevronUp(E70E).png"></a>
+				<a href="#homeSection"> <img src="images/ChevronUp(E70E).png"></a>
 			</div>
 		</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script src='script/script.js'></script>
 </body>
 </html>
