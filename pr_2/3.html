@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ефект друкарської машинки</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    #input-text {
+      margin: 10px;
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005073;
+    }
+    #printer-text {
+      font-size: 24px;
+      margin: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <input type="text" id="input-text" placeholder="Введіть текст">
+  <button onclick="printUserText()">Роздрукувати</button>
+  <div id="printer-text"></div>
+  <script type="text/javascript">
+    function printUserText() {
+      var inputText = document.getElementById("input-text").value;
+      printText(inputText);
+    }
+
+    function printText(text) {
+      var printerText = document.getElementById("printer-text");
+      printerText.innerHTML = ''; 
+      var characters = text.split('');
+      var currentIndex = 0;
+
+      var intervalId = setInterval(function () {
+        if (currentIndex < characters.length) {
+          printerText.innerHTML += characters[currentIndex];
+          currentIndex++;
+        } else {
+          clearInterval(intervalId);
+        }
+      }, 100);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Годинник</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        #chas {
+            font-size: 24px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <input type='text' id='chas' size='10'>
+    <script>
+        function time() {
+            let currentTime = new Date();
+            let hours = currentTime.getHours();
+            let minutes = currentTime.getMinutes();
+            let seconds = currentTime.getSeconds();
+
+            function addLeadingZero(value) {
+                return value < 10 ? "0" + value : value;
+            }
+
+            chas.value = addLeadingZero(hours) + " : " + addLeadingZero(minutes) + " : " + addLeadingZero(seconds);
+
+            setTimeout(time, 1000);
+        }
+
+        time();
+    </script>
+</body>
+</html>

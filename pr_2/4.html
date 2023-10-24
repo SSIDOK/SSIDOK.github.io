@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Гра на ставках</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    h1 {
+      margin: 20px;
+    }
+    #betAmount {
+      padding: 5px;
+    }
+    button {
+      padding: 5px 10px;
+      background-color: #0077b6;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005073;
+    }
+    #result {
+      font-size: 24px;
+      margin: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>Введіть суму ставки:</h1>
+  <input type="number" id="betAmount">
+  <button onclick="playGame()">Грати</button>
+  <p id="result"></p>
+  <script type="text/javascript">
+    function playGame() {
+      var betAmount = parseFloat(document.getElementById("betAmount").value);
+      var randomNumber = Math.floor(Math.random() * 11) - 5; // Генеруємо випадкове число від -5 до 5
+      
+      setTimeout(function() {
+        var resultElement = document.getElementById("result");
+        
+        if (randomNumber <= 0) {
+          resultElement.innerHTML = "Ви не вгадали! Ви втратили свою ставку.";
+        } else {
+          var winnings = betAmount * randomNumber;
+          resultElement.innerHTML = "Ви виграли " + winnings + " гривень!";
+        }
+      }, 1000); // Виводимо результат через 1 секунду
+    }
+  </script>
+</body>
+</html>
