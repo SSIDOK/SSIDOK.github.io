@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="tabs">
+        <div class="tab whiteborder">Radius</div>
+        <div class="tab">Margin</div>
+        <div class="tab">Max-height</div>
+        <div class="tabContent">
+            <div> Верхній лівий радіус:
+                <input type="range" id="rtl" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="ttl" value="0">
+            </div>
+            <div> Верхній правий радіус:
+                <input type="range" id="rtr" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="ttr" value="0">
+            </div>
+            <div> Нижній правий радіус:
+                <input type="range" id="rbr" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="tbr" value="0">
+            </div>
+            <div> Нижній лівий радіус:
+                <input type="range" id="rbl" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="tbl" value="0">
+            </div>
+        </div>
+        <div class="tabContent">
+            <div>
+                <div> Верхній margin:
+                    <input type="range" id="mt" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="mtValue" value="0">
+                </div>
+                <div> Правий margin:
+                    <input type="range" id="mr" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="mrValue" value="0">
+                </div>
+                <div> Нижній margin:
+                    <input type="range" id="mb" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="mbValue" value="0">
+                </div>
+                <div> Лівий margin:
+                    <input type="range" id="ml" min="0" max="100" value="0" oninput="generate()">
+                    <input type="text" id="mlValue" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="tabContent">
+            <div> Max Height:
+                <input type="range" id="maxHeight" min="0" max="100" value="0" oninput="generate()">
+                <input type="text" id="maxHeightValue" value="0">
+            </div>
+            
+        </div>
+        <div id="block"></div>
+        <div id="code">
+            Code:
+            <textarea id="cssCode" rows="3" cols="30"></textarea>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
